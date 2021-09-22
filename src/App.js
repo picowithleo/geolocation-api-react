@@ -1,10 +1,18 @@
-import './App.css';
-import Geolocation from './component/location/Geolocation';
+import './App.less';
+import LocationPage from './component/LocationPage';
+import { Layout } from 'antd';
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
     <div className="App">
-      <Geolocation />
+      <Layout>
+        <Header />
+        <Content>  
+          <LocationPage />
+        </Content>
+        <Footer />
+      </Layout>
     </div>
   );
 }
